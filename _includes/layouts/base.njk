@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/global.css">
+    {% block head %}
+        <title>Austin Pocus - My personal site, blog, portfolio, and wiki</title>
+    {% endblock %}
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="heading-group">
+            <h1 class="heading">Austin Pocus</h1>
+            <h2 class="subheading">My personal site, blog portfolio, and wiki</h2>
+        </div>
+
+        <div class="links">
+            <div class="local">
+                <a>Blog</a>
+                <a>Portfolio</a>
+                <a>Resume</a>
+                <a>Wiki</a>
+            </div>
+            <div class="social">
+                <a>Github</a>
+                <a>LinkedIn</a>
+                <a>Twitter</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+
+    <footer id="main-footer">
+        &copy; Copyright 2021 Austin Pocus. All rights reserved.
+    </footer>
+</body>
+
+</html>
