@@ -3,13 +3,24 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/static/global.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     {% block head %}
         <title>Austin Pocus - My personal site, blog, portfolio, and wiki</title>
     {% endblock %}
 </head>
 
 <body>
+    {% set css %}
+        {% include "css/global.css" %}
+        {% include "css/normalize.css" %}
+    {% endset %}
+
+    <!-- feed it through our cssmin filter to minify -->
+    <style>
+        {{ css | cssmin | safe }}
+    </style>
+
     <header id="main-header">
         <div class="heading-group">
             <h1 class="heading">Austin Pocus</h1>

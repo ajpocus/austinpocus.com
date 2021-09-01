@@ -1,0 +1,24 @@
+{
+  "name": "austinpocus.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajpocus/austinpocus.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajpocus/austinpocus.com/issues"
+  },
+  "homepage": "https://github.com/ajpocus/austinpocus.com#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "clean-css": "^5.1.5"
+  }
+}
