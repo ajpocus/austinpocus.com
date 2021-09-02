@@ -2,7 +2,7 @@
     display: flex;
     align-items: baseline;
     margin: 20px;
-    padding: 16px;
+    padding: 16px 0;
     border-bottom: 2px dashed #333;
 }
 
@@ -25,7 +25,7 @@
 }
 
 #main-header h1.heading {
-    margin-bottom: 12px;
+    margin: 0;
 }
 
 #main-header h2.subheading {
