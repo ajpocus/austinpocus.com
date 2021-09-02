@@ -2,10 +2,66 @@
 @import "pixel-borders";
 
 .about-me {
-    @include pixel-borders(
-        $corner-size: 2,
-        $border-color: $baseColor
-    );
-
     padding: 12px;
+    display: flex;
+    justify-content: space-evenly;
+
+    section {
+        @include pixel-borders(
+            $corner-size: 2,
+            $border-color: $baseColor,
+            $border-size: 12px
+        );
+
+        flex: 1;
+        margin: 0 12px;
+        min-width: 300px;
+        min-height: 300px;
+        padding: 6px 16px;
+    }
+
+    .stats-section {
+        position: relative;
+
+        .stat-list {
+            list-style: none;
+        }
+
+        .stat {
+            display: flex;
+            justify-content: space-between;
+
+            .name {
+                font-weight: bold;
+            }
+        }
+
+        .spacer {
+            min-height: 1em;
+        }
+
+        .tooltip {
+            border: 1px solid #444c;
+            border-radius: 50%;
+            color: #444c;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        aside.info {
+            opacity: 1;
+            
+            &.hidden {
+                opacity: 0;
+            }
+        }
+    }
 }
