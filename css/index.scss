@@ -1,0 +1,11 @@
+@import "vars";
+@import "pixel-borders";
+
+.about-me {
+    @include pixel-borders(
+        $corner-size: 2,
+        $border-color: $baseColor
+    );
+
+    padding: 12px;
+}

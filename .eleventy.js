@@ -1,6 +1,10 @@
-const CleanCSS = require("clean-css");
+const pluginSass = require("eleventy-plugin-sass");
+
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addFilter("cssmin", function(code) {
-    return new CleanCSS({}).minify(code).styles;
-  });
-};
+  eleventyConfig.addPlugin(pluginSass);
+  eleventyConfig.addPassthroughCopy('css/**/*.css');
+
+  return {
+    passthroughFileCopy: true
+  }
+}

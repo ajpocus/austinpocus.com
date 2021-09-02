@@ -6,25 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-    {% block head %}
-        <title>Austin Pocus - My personal site</title>
-    {% endblock %}
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/base.css">
+
+    {% block head %}{% endblock %}
 </head>
 
 <body>
-    {% set css %}
-        {% include "css/normalize.css" %}
-        {% include "css/global.css" %}
-        {% include "css/base.css" %}
-    {% endset %}
-
-    <!-- feed it through our cssmin filter to minify -->
-    <style>
-        {{ css | cssmin | safe }}
-    </style>
-
     <header id="main-header">
         <div class="heading-group">
             <h1 class="heading">Austin Pocus</h1>

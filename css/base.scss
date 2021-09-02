@@ -1,0 +1,45 @@
+@import "vars";
+
+#main-header {
+    display: flex;
+    align-items: baseline;
+    margin: 20px;
+    padding: 16px 0;
+    border-bottom: 2px dashed #333;
+
+    .links {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        margin: 0 1em;
+        font-weight: bold;
+        font-size: 24px;
+
+        a {
+            text-decoration: underline;
+            text-decoration-style: double;
+            text-underline-offset: 4px;
+            position: relative;
+            bottom: 10px;
+            margin: 0 6px;
+        }
+    }
+
+    h1.heading {
+        margin: 0;
+    }
+
+    h2.subheading {
+        margin: 0;
+        color: rgba(16, 16, 32, 0.8);
+        font-size: 32px;
+    }
+}
+
+main {
+    padding: 20px;
+
+    .title {
+        margin-top: 0
+    }
+}

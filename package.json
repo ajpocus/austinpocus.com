@@ -17,8 +17,9 @@
     "url": "https://github.com/ajpocus/austinpocus.com/issues"
   },
   "homepage": "https://github.com/ajpocus/austinpocus.com#readme",
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "clean-css": "^5.1.5"
+    "clean-css": "^5.1.5",
+    "eleventy-plugin-sass": "^1.2.0"
   }
 }
