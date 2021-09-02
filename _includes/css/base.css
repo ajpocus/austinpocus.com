@@ -1,0 +1,35 @@
+#main-header {
+    display: flex;
+    align-items: baseline;
+    margin: 20px;
+    padding: 16px;
+    border-bottom: 2px dashed #333;
+}
+
+#main-header .links {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    margin: 0 1em;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#main-header .links a {
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-underline-offset: 4px;
+    position: relative;
+    bottom: 10px;
+    margin: 0 6px;
+}
+
+#main-header h1.heading {
+    margin-bottom: 12px;
+}
+
+#main-header h2.subheading {
+    margin: 0;
+    color: rgba(16, 16, 32, 0.8);
+    font-size: 32px;
+}

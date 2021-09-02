@@ -4,16 +4,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     {% block head %}
-        <title>Austin Pocus - My personal site, blog, portfolio, and wiki</title>
+        <title>Austin Pocus - My personal site</title>
     {% endblock %}
 </head>
 
 <body>
     {% set css %}
-        {% include "css/global.css" %}
         {% include "css/normalize.css" %}
+        {% include "css/global.css" %}
+        {% include "css/base.css" %}
     {% endset %}
 
     <!-- feed it through our cssmin filter to minify -->
@@ -24,20 +28,20 @@
     <header id="main-header">
         <div class="heading-group">
             <h1 class="heading">Austin Pocus</h1>
-            <h2 class="subheading">My personal site, blog portfolio, and wiki</h2>
+            <h2 class="subheading">My personal site</h2>
         </div>
 
         <div class="links">
             <div class="local">
-                <a>Blog</a>
-                <a>Portfolio</a>
-                <a>Resume</a>
-                <a>Wiki</a>
+                <a href="https://blog.austinpocus.com">Blog</a>
+                <a href="/portfolio">Portfolio</a>
+                <a href="/resume">Resume</a>
+                <a href="https://wiki.austinpocus.com">Wiki</a>
             </div>
             <div class="social">
-                <a>Github</a>
-                <a>LinkedIn</a>
-                <a>Twitter</a>
+                <a href="https://github.com/ajpocus">Github</a>
+                <a href="https://linkedin.com/in/austin-pocus">LinkedIn</a>
+                <a href="https://twitter.com/AustinPocus">Twitter</a>
             </div>
         </div>
     </header>
