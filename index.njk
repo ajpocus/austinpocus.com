@@ -6,34 +6,60 @@
 {% endblock %}
 
 {% block main %}
-<div>
-    <div class="about-me">
+<div class="home">
+    <div class="sections">
         <section class="stats-section">
             <div class="heading-group">
                 <h3 class="section-name">Stats</h3>
-                <aside class="hidden info">(Out of 20)</aside>
-                <div class="tooltip">?</div>
             </div>
+
             <ol class="stat-list">
-                <li class="stat">
+                <li class="level stat">
                     <label class="name">Level</label>
-                    <span class="value">10y</span>
+                    <div class="dash"></div>
+                    <span class="value">30</span>
                 </li>
-                <li class="spacer"></li>
+                
                 <li class="stat">
-
+                    <label class="name">Age started</label>
+                    <div class="dash"></div>
+                    <span class="value">13</span>
                 </li>
-                <li class="stat">
 
+                <li class="stat">
+                    <label class="name">Startups</label>
+                    <div class="dash"></div>
+                    <span class="value">3</span>
+                </li>
+
+                <li class="stat">
+                    <label class="name">Funding</label>
+                    <div class="dash"></div>
+                    <span class="value">0</span>
                 </li>
             </ol>
         </section>
         
-        <section>
-        
+        <section class="main-section">
+            <div class="pictures">
+                <figure class="left">
+                    <img class="picture" src="/img/me_and_sissy.jpg">
+                    <figcaption>Me with my sister, Sara</figcaption>
+                </figure>
+                <figure class="right">
+                    <img class="picture" src="/img/me.jpg">
+                    <figcaption>Me, with more hair</figcaption>
+                </figure>
+            </div>
+
+            <div class="content">
+                <h3>Bio</h3>
+
+                <p>This si a test</p>
+            </div>
         </section>
         
-        <section>
+        <section class="tools-section">
         
         </section>
     </div>

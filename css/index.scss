@@ -1,8 +1,7 @@
 @import "vars";
 @import "pixel-borders";
 
-.about-me {
-    padding: 12px;
+.sections {
     display: flex;
     justify-content: space-evenly;
 
@@ -15,53 +14,75 @@
 
         flex: 1;
         margin: 0 12px;
-        min-width: 300px;
-        min-height: 300px;
-        padding: 6px 16px;
+
+        .heading-group {
+            display: flex;
+            align-items: baseline;
+        }
     }
 
     .stats-section {
         position: relative;
+        padding: 12px;
+
+        .section-name {
+            margin: 12px;
+        }
 
         .stat-list {
             list-style: none;
+            margin: 0;
+            padding: 12px;
+        }
+
+        .level.stat {
+            margin: 16px 0;
         }
 
         .stat {
             display: flex;
             justify-content: space-between;
+            margin: 6px 0;
 
             .name {
                 font-weight: bold;
             }
-        }
 
-        .spacer {
-            min-height: 1em;
-        }
-
-        .tooltip {
-            border: 1px solid #444c;
-            border-radius: 50%;
-            color: #444c;
-            width: 24px;
-            height: 24px;
-            text-align: center;
-            display: flex;
-            align-items: baseline;
-            justify-content: center;
-            cursor: pointer;
-            position: absolute;
-            right: 20px;
-            top: 20px;
-        }
-
-        aside.info {
-            opacity: 1;
-            
-            &.hidden {
-                opacity: 0;
+            .dash {
+                flex: 1; /* grow to fill remaining space*/
+                border-bottom: 2px dashed #666c;
+                position: relative;
+                bottom: 8px;
+                margin: 0 8px
             }
         }
+    }
+}
+
+.main-section {
+    overflow: hidden;
+
+    .pictures {
+        display: flex;
+    }
+
+    figure {
+        position: relative;
+        margin: 10px;
+
+        img.picture {
+            height: 180px;
+            width: auto;
+            border: 2px solid $textColor;
+        }
+
+        figcaption {
+            font-size: 16px;
+            font-style: italic;
+        }
+    }
+
+    .content {
+        padding: 0.5em 2em;
     }
 }
