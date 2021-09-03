@@ -3,7 +3,7 @@
 #main-header {
     display: flex;
     align-items: baseline;
-    margin: 18px;
+    margin: 12px 16px;
     padding: 16px 0;
     border-bottom: 2px dashed #333;
 
@@ -42,9 +42,13 @@
 }
 
 main {
-    padding: 20px;
+    padding: 1em;
 
     .title {
         margin-top: 0
     }
+}
+
+footer {
+    padding: 1em;
 }

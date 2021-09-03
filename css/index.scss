@@ -3,7 +3,7 @@
 
 .sections {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     section {
         @include pixel-borders(
@@ -14,6 +14,14 @@
 
         flex: 1;
         margin: 0 12px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    
+        &:last-child {
+            margin-right: 0;
+        }
 
         .heading-group {
             display: flex;
