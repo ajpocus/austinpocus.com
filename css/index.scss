@@ -69,6 +69,7 @@
 
 .main-section {
     overflow: hidden;
+    padding: 1.2em;
 
     .pictures {
         display: flex;
@@ -76,7 +77,8 @@
 
     figure {
         position: relative;
-        margin: 10px;
+        margin: 0;
+        margin-right: 2em;
 
         img.picture {
             height: 180px;
@@ -91,6 +93,8 @@
     }
 
     .content {
-        padding: 0.5em 2em;
+        h3 {
+            margin: 1em 0;
+        }
     }
 }
