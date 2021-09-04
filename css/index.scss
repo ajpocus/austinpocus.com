@@ -123,3 +123,50 @@
         }
     }
 }
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 12px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .skill {
+        width: 50%;
+        padding: 12px;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+
+        .name {
+            display: flex;
+        }
+
+        i {
+            color: $textColor;
+            font-size: 24px;
+        }
+
+        label {
+            align-self: center;
+            margin: 0 8px 0 4px;
+        }
+
+        .meter {
+            display: flex;
+            margin: 0 4px;
+
+            .cell {
+                border: 1px solid $textColor;
+                width: 16px;
+                height: 18px;
+                background: transparent;
+                margin: 0 3px;
+                
+                &.full {
+                    background: lightgreen;
+                }
+            }
+        }
+    }
+}
