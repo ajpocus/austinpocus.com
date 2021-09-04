@@ -5,7 +5,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css/**/*.css");
   eleventyConfig.addPassthroughCopy("js/**/*.js");
   eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("favicon.png")
+  eleventyConfig.addPassthroughCopy("favicon.png");
+  eleventyConfig.addPassthroughCopy("_redirects");
 
   return {
     passthroughFileCopy: true
