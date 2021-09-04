@@ -34,6 +34,11 @@
         border-right: 1px solid #337b;
         padding-right: 1.5em;
 
+        a {
+            text-decoration: none;
+            color: $textColor;
+        }
+        
         h1.heading {
             margin: 0;
         }
