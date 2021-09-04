@@ -10,7 +10,7 @@
     .links {
         display: flex;
         flex: 1;
-        justify-content: space-between;
+        justify-content: flex-end;
         margin: 0 1em;
         font-weight: bold;
         font-size: 24px;
@@ -21,7 +21,7 @@
             text-underline-offset: 4px;
             position: relative;
             bottom: 10px;
-            margin: 0 6px;
+            margin: 0 8px;
             color: $linkColor;
 
             &:visited {
@@ -38,7 +38,7 @@
             text-decoration: none;
             color: $textColor;
         }
-        
+
         h1.heading {
             margin: 0;
         }
