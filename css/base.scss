@@ -62,3 +62,19 @@ main {
 footer {
     padding: 1em;
 }
+
+@media screen and (max-width: 768px) {
+    #main-header {
+        flex-direction: column;
+
+        .heading-group {
+            border: none;
+        }
+
+        .links {
+            display: flex;
+            justify-content: flex-start;
+            margin: 24px 0 0 -8px;
+        }
+    }
+}
