@@ -26,6 +26,7 @@ body {
 
 main {
     flex: 1 0 auto;
+	padding: 1em;
 }
 
 h1, h2 {
@@ -38,6 +39,65 @@ h1, h2 {
 
 .clear {
     float: none;
+}
+
+#main-header {
+    display: flex;
+    align-items: baseline;
+    margin: 12px 16px;
+    padding: 16px 0;
+    border-bottom: 2px dashed #333;
+}
+
+.links {
+	display: flex;
+	flex: 1;
+	justify-content: flex-end;
+	margin: 0 1em;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.links a {
+	text-decoration: underline;
+	text-decoration-style: double;
+	text-underline-offset: 4px;
+	position: relative;
+	bottom: 10px;
+	margin: 0 8px;
+	color: var(--link-color);
+}
+
+.links a:visited {
+	color: var(--visited-link-color);
+}
+
+.heading-group {
+	border-right: 1px solid #337b;
+	padding-right: 1.5em;
+}
+
+.heading-group a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+h1.heading {
+	margin: 0;
+}
+
+h2.subheading {
+	margin: 0;
+	color: rgba(16, 16, 32, 0.8);
+	font-size: 32px;
+}
+
+main .title {
+	margin-top: 0
+}
+
+footer {
+    padding: 1em;
 }
 
 .sections {
@@ -231,5 +291,19 @@ figure .content .heading {
 
 	.skill {
 		width: auto;
+	}
+
+	#main-header {
+        flex-direction: column;
+	}
+
+    #main-header .heading-group {
+		border: none;
+	}
+
+    #main-header .links {
+		display: flex;
+		justify-content: flex-start;
+		margin: 24px 0 0 -8px;
 	}
 }
