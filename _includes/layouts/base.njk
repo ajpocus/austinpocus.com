@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cc7111bda4.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/base.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9LLYN5SQGG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-9LLYN5SQGG');
+    </script>
+
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="heading-group">
+            <a href="/"><h1 class="heading">Austin Pocus</h1></a>
+            <aside class="subheading">My personal site</aside>
+        </div>
+
+        <div class="links">
+            <a href="https://blog.austinpocus.com">Blog</a>
+            <a href="https://github.com/ajpocus">Github</a>
+            <a href="https://linkedin.com/in/austin-pocus">LinkedIn</a>
+            <a href="https://twitter.com/AustinPocus">Twitter</a>
+        </div>
+    </header>
+
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+
+    <footer id="main-footer">
+        &copy; Copyright 2021 Austin Pocus. All rights reserved.
+    </footer>
+</body>
+
+</html>
