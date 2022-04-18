@@ -1,0 +1,200 @@
+:root {
+	--base-color: #338;
+	--text-color: #335;
+	--link-color: #0158DB;
+	--visited-link-color: #3585fe;
+	--border-color: #666c;
+}
+
+.sections {
+	display: flex;
+	justify-content: space-between;
+}
+
+.sections section {
+	flex: 1;
+	margin: 0 12px;
+}
+
+.sections section:first-child {
+	margin-left: 0;
+}
+
+.sections section:last-child {
+	margin-right: 0;
+}
+
+.sections section .heading-group {
+	display: flex;
+	align-items: baseline;
+}
+
+.stats-section {
+	position: relative;
+	padding: 12px;
+}
+
+.stats-section .section-name {
+	margin: 12px;
+}
+
+.stats-section .section-name .feat-list {
+	list-style: none;
+	margin: 0;
+	padding: 12px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.feat-list .feat {
+	padding: 0.75em;
+	width: 50%;
+}
+
+.feat header {
+	display: flex;
+	align-items: baseline;
+	margin: 8px 0;
+}
+
+.feat header i {
+	font-size: 28px;
+}
+
+.feat header h3 {
+	font-size: 24px;
+	margin: 0 12px;
+}
+
+.stat-list {
+	list-style: none;
+	margin: 0;
+	padding: 12px;
+}
+
+.level.stat {
+	margin: 16px 0;
+}
+
+.stat {
+	display: flex;
+	justify-content: space-between;
+	margin: 6px 0;
+}
+
+.stat .name {
+	font-weight: bold;
+}
+
+.main-section {
+	overflow: hidden;
+	padding: 1.2em;
+	display: flex;
+}
+
+.main-section figure {
+	float: left;
+	position: relative;
+	margin-right: 1em;
+}
+
+figure img.picture {
+	height: 226px;
+	width: auto;
+	border: 2px solid var(--text-color);
+}
+
+figure figcaption {
+	font-size: 16px;
+	font-style: italic;
+}
+
+figure .content {
+	line-height: 1.5;
+}
+
+figure .content .heading {
+	margin: 0;
+	margin-top: 12px;
+}
+
+.skill-list {
+	list-style: none;
+	padding: 0;
+	margin: 0 12px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.skill {
+	width: 50%;
+	padding: 12px;
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+}
+
+.skill .dash {
+	flex: 1; /* grow to fill remaining space*/
+	border-bottom: 2px dashed var(--border-color);
+	position: relative;
+	bottom: 8px;
+	margin: 0 8px
+}
+
+.skill .name {
+	display: flex;
+}
+
+.skill i {
+	color: var(--text-color);
+	font-size: 24px;
+}
+
+.skill label {
+	align-self: center;
+	margin: 0 4px 0 8px;
+}
+
+.skill .meter {
+	display: flex;
+	margin: 0 4px;
+}
+
+.skill .meter .cell {
+	border: 1px solid var(--text-color);
+	width: 8px;
+	height: 18px;
+	background: transparent;
+	margin: 0 2px;
+}
+
+.skill .meter .cell.full {
+	background: lightgreen;
+}
+
+@media screen and (max-width: 1366px) {
+	.sections {
+		flex-direction: column;
+	}
+
+	section {
+		margin: 16px 0 8px 0;
+	}
+	
+	.feat-list {
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+	.feat {
+		width: auto;
+	}
+	
+	.skill-list {
+		flex-direction: column;
+	}
+
+	.skill {
+		width: auto;
+	}
+}
