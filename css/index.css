@@ -71,7 +71,7 @@ h1, h2 {
 	color: var(--visited-link-color);
 }
 
-.heading-group {
+#main-header .heading-group {
 	border-right: 1px solid #337b;
 	padding-right: 1.5em;
 }
