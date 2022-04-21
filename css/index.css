@@ -247,11 +247,13 @@ a {
 	color: var(--link-color);
 }
 
-.skill .dash {
+.dash {
 	border-bottom: 2px dashed var(--border-color);
 	position: relative;
 	bottom: 8px;
-	margin: 0 8px
+	margin: 0 8px;
+	width: 100%;
+	height: 1px;
 }
 
 /* 
