@@ -8,7 +8,7 @@
         {
             "icon": "fa-money-bill",
             "title": "Bootstrapped",
-            "description": "3 startups, $0 external funding."
+            "description": "3 startups, 1 acquisition, $0 external funding."
         },
         {
             "icon": "fa-campground",
@@ -19,11 +19,6 @@
             "icon": "fa-calendar",
             "title": "Ten and Change",
             "description": "Over a decade of professional experience."
-        },
-        {
-            "icon": "fa-award",
-            "title": "Three-peat",
-            "description": "Co-founded 3 startups (1 acquisition)."
         }
     ],
     "skills": [
