@@ -21,5 +21,8 @@
   "dependencies": {
     "@11ty/eleventy": "^1.0.1",
     "async": "^2.6.4"
+  },
+  "devDependencies": {
+    "async": "^2.6.4"
   }
 }
