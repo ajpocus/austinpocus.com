@@ -2,6 +2,7 @@
 <html lang="en">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Austin Pocus - My personal site - About me</title>
 	<link rel="icon" href="/favicon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +29,7 @@
 
 <body>
 	<div class="flex-col justify-between font-source-code-pro p-8">
-		<header class="md:flex md:justify-between items-baseline">
+		<header class="lg:flex lg:justify-between items-baseline">
 			<div>
 				<a href="/"><h1 class="text-3xl">Austin Pocus</h1></a>
 				<aside>My personal site</aside>
@@ -42,11 +43,11 @@
 			</div>
 		</header>
 	
-		<main class="flex-1 flex-col md:flex">
-			<section>
+		<main class="flex-1 lg:flex">
+			<section class="lg:flex-basis-1/2">
 				<figure class="flex justify-center">
-					<img class="h-36 md:h-64" src="/img/me6.jpg">
-					<img class="h-36 md:h-64" src="/img/me.jpg">
+					<img class="h-36 lg:h-64" src="/img/me6.jpg">
+					<img class="h-36 lg:h-64" src="/img/me.jpg">
 				</figure>
 
 				<h2 class="text-2xl">Bio</h2>
@@ -64,7 +65,7 @@
 				<p>In my spare time, I like to mess around with the MIDI keyboard and software synths, read (especially sci-fi and history books), and play fetch with my cat.</p>
 			</section>
 	
-			<section class="stats-section">
+			<section class="lg:flex-basis-1/2">
 				<div class="heading-group">
 					<h2 class="text-2xl">Achievements</h2>
 				</div>
@@ -90,15 +91,15 @@
 	
 				<ul class="flex flex-wrap">
 					{% for skill in info.skills %}
-						<li class="flex justify-between md:w-1/2 p-8" title="{{ skill.value }} / 10">
-							<div class="name">
+						<li class="flex justify-between lg:w-1/2 p-8" title="{{ skill.value }} / 10">
+							<div class="text-lg flex items-baseline">
 								<i class="fab {{ skill.icon }}"></i>
-								<label>{{ skill.name }}</label>
+								<label class="mx-2 whitespace-nowrap">{{ skill.name }}</label>
 							</div>
 		
-							<div class="dash"></div>
+							<div class="dash mx-4 h-0.5 w-full self-center"></div>
 		
-							<div class="meter">
+							<div class="flex self-center">
 								{% for i in range(skill.value) %}
 									<div class="full cell"></div>
 								{% endfor %}
