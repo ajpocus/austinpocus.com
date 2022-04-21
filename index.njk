@@ -1,281 +1,118 @@
-{% extends "layouts/base.njk" %}
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Austin Pocus - My personal site - About me</title>
+	<link rel="icon" href="/favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://kit.fontawesome.com/cc7111bda4.js" crossorigin="anonymous"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					fontFamily: {
+						'source-code-pro': ['Source Code Pro', 'monospace'] 
+					},
+				},
+			}
+		}
+	</script>
+	<link rel="stylesheet" href="/css/index.css">
+</html>
 
-{% block head %}
-    <title>Austin Pocus - My personal site - About me</title>
-    <link rel="stylesheet" href="/css/index.css">
-{% endblock %}
+<body>
+	<div class="font-source-code-pro p-8">
+		<header class="lg:flex lg:justify-between items-baseline">
+			<div>
+				<a class="link" href="/"><h1 class="text-4xl">Austin Pocus</h1></a>
+				<aside>My personal site</aside>
+			</div>
+	
+			<div class="flex">
+				<a class="link text-lg underline decoration-double underline-offset-8 mr-2" href="https://blog.austinpocus.com">Blog</a>
+				<a class="link text-lg underline decoration-double underline-offset-8 mx-2" href="https://github.com/ajpocus">Github</a>
+				<a class="link text-lg underline decoration-double underline-offset-8 mx-2" href="https://linkedin.com/in/austin-pocus">LinkedIn</a>
+				<a class="link text-lg underline decoration-double underline-offset-8 ml-2" href="https://twitter.com/AustinPocus">Twitter</a>
+			</div>
+		</header>
+	
+		<main class="flex-1 lg:flex">
+			<section class="lg:flex-1 lg:mr-8">
+				<figure class="flex justify-center my-8">
+					<img class="h-64 lg:h-48" src="/img/me6.jpg">
+					<img class="h-64 lg:h-48" src="/img/me.jpg">
+				</figure>
 
-{% block main %}
-<div class="home">
-    <div class="sections">        
-        <section class="main-section">
-            <div class="content">
-                <figure class="left">
-                    <img class="picture" src="/img/me6.jpg">
-                </figure>
-                <div class="clear"></div>
+				<h2 class="text-2xl">Bio</h2>
 
-                <h2 class="heading">Bio</h2>
+				<p class="my-4">I've had a lifelong obsession with making things using computers. I started because I was a video game fanatic as a kid, and wanted to make my own games.</p>
 
-                <p>I've had a lifelong obsession with making things using computers. I started because I was a video game fanatic as a kid, and wanted to make my own games.</p>
+				<p class="my-4">About 17 years later, I still haven't built a full game, most of my experience being on the web. Even so, I've tried to make a wide variety of things, including:</p>
+				
+				<ul class="list-disc ml-4">
+					<li>A frequency analysis of sound waves from my guitar</li>
+					<li>Graphics demos and pixel art makers</li>
+					<li>An additive synthesizer that combined waveforms to create 8-bit sounds</li>
+				</ul>
 
-                <p>About 17 years later, I still haven't built a full game, most of my experience being on the web. Even so, I've tried to make a wide variety of things, including:</p>
-                
-                <ul>
-                    <li>A frequency analysis of sound waves from my guitar</li>
-                    <li>Graphics demos and pixel art makers</li>
-                    <li>An additive synthesizer that combined waveforms to create 8-bit sounds</li>
-                </ul>
+				<p class="my-4">In my spare time, I like to mess around with the MIDI keyboard and software synths, read (especially sci-fi and history books), and play fetch with my cat.</p>
+			</section>
+	
+			<section class="lg:flex-1">
+				<div class="heading-group mt-8">
+					<h2 class="text-2xl">Achievements</h2>
+				</div>
 
-                <p>In my spare time, I like to mess around with the MIDI keyboard and software synths, read (especially sci-fi and history books), and play fetch with my cat.</p>
-            </div>
-        </section>
+				<ul class="flex flex-wrap">
+					{% for feat in info.feats %}
+						<li class="w-1/2 p-4 flex-initial">
+							<header class="flex items-baseline">
+								<i class="fas {{ feat.icon }}"></i>
+								<h3 class="text-xl mx-2">{{ feat.name }}</h3>
+							</header>
+		
+							<div class="text-lg">
+								{{ feat.description }}
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+	
+				<div class="heading-group mt-8">
+					<h2 class="text-2xl">Skills</h2>
+				</div>
+	
+				<ul class="w-full lg:flex lg:flex-wrap lg:flex-initial">
+					{% for skill in info.skills %}
+						<li class="flex justify-between w-full p-8" title="{{ skill.value }} / 10">
+							<div class="text-lg flex items-baseline">
+								<i class="fab {{ skill.icon }}"></i>
+								<label class="mx-2 whitespace-nowrap">{{ skill.name }}</label>
+							</div>
 
-        <section class="stats-section">
-            <div class="heading-group">
-                <h2 class="section-name">Achievements</h2>
-            </div>
+							<div class="dash mx-4 h-0.5 w-full self-center"></div>
 
-            <ul class="feat-list">
-                <li class="feat">
-                    <header>
-                        <i class="fas fa-user-graduate"></i>
-                        <h3>Lifelong Student</h3>
-                    </header>
+							<div class="flex self-center">
+								{% for i in range(skill.value) %}
+									<div class="full cell"></div>
+								{% endfor %}
 
-                    <div class="description">
-                        17-plus years teaching myself to code.
-                    </div>
-                </li>
-
-                <li class="feat">
-                    <header>
-                        <i class="fas fa-money-bill"></i>
-                        <h3>Bootstrapped</h3>
-                    </header>
-
-                    <div class="description">
-                        3 startups, $0 external funding.
-                    </div>
-                </li>
-
-                <li class="feat">
-                    <header>
-                        <i class="fas fa-campground"></i>
-                        <h3>Scrappy Camper</h3>
-                    </header>
-
-                    <div class="description">
-                        Built several PCs from scrap parts as a teenager.
-                    </div>
-                </li>
-
-                <li class="feat">
-                    <header>
-                        <i class="fas fa-calendar"></i>
-                        <h3>Ten and change</h3>
-                    </header>
-
-                    <div class="description">
-                        Over a decade of professional experience.
-                    </div>
-                </li>
-
-                <li class="feat">
-                    <header>
-                        <i class="fas fa-award"></i>
-                        <h3>Three-peat</h3>
-                    </header>
-
-                    <div class="description">
-                        Co-founded 3 startups (1 acquisition).
-                    </div>
-                </li>
-            </ul>
-
-            <div class="heading-group">
-                <h2 class="section-name">Skills</h2>
-            </div>
-
-            <ul class="skill-list">
-                <li class="skill">
-                    <div class="name">
-                        <i class="fab fa-js"></i>
-                        <label>Javascript</label>
-                    </div>
-
-                    <div class="dash"></div>
-
-                    <div class="meter">
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="cell"></div>
-                    </div>
-                </li>
-
-                <li class="skill">
-                    <div class="name">
-                        <i class="fab fa-node-js"></i>
-                        <label>Node.js</label>
-                    </div>
-
-                    <div class="dash"></div>
-
-                    <div class="meter">
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="cell"></div>
-                    </div>
-                </li>
-
-                <li class="skill">
-                    <div class="name">
-                        <i class="fab fa-react"></i>
-                        <label>React</label>
-                    </div>
-
-                    <div class="dash"></div>
-
-                    <div class="meter">
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                    </div>
-                </li>
-
-                <li class="skill">
-                    <div class="name">
-                        <i class="fas fa-cloud"></i>
-                        <label>Web APIs</label>
-                    </div>
-
-                    <div class="dash"></div>
-
-                    <div class="meter">
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                    </div>
-                </li>
-
-                <li class="skill">
-                    <div class="name">
-                        <i class="fab fa-linux"></i>
-                        <label>Linux</label>
-                    </div>
-
-                    <div class="dash"></div>
-
-                    <div class="meter">
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                    </div>
-                </li>
-
-                <li class="skill">
-                    <div class="name">
-                        <i class="fab fa-python"></i>
-                        <label>Python</label>
-                    </div>
-
-                    <div class="dash"></div>
-
-                    <div class="meter">
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                    </div>
-                </li>
-
-                <li class="skill">
-                    <div class="name">
-                        <i class="fas fa-gem"></i>
-                        <label>Ruby</label>
-                    </div>
-
-                    <div class="dash"></div>
-
-                    <div class="meter">
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                    </div>
-                </li>
-
-                <li class="skill">
-                    <div class="name">
-                        <i class="fab fa-rust"></i>
-                        <label>Rust</label>
-                    </div>
-
-                    <div class="dash"></div>
-
-                    <div class="meter">
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="full cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                    </div>
-                </li>
-            </ul>
-        </section>
-    </div>
-</div>
-<script src="/js/index.js"></script>
-{% endblock %}
+								{% for i in range(10 - skill.value) %}
+									<div class="cell"></div>
+								{% endfor %}
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+			</section>
+		</main>
+	
+		<footer class="flex justify-between mt-8">
+			<p>&copy; Copyright 2021 Austin Pocus. All rights reserved.</p>
+			<a class="link" href="https://github.com/ajpocus/austinpocus.com">View source</a>
+		</footer>
+	</div>
+</body>

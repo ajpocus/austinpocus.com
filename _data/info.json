@@ -1,0 +1,66 @@
+{
+    "feats": [
+        {
+            "icon": "fa-user-graduate",
+            "name": "Lifelong Student",
+            "description": "17-plus years teaching myself to code."
+        },
+        {
+            "icon": "fa-money-bill",
+            "name": "Bootstrapped",
+            "description": "3 startups, 1 acquisition, $0 external funding."
+        },
+        {
+            "icon": "fa-campground",
+            "name": "Scrappy Camper",
+            "description": "Built several PCs from scrap parts as a teenager."
+        },
+        {
+            "icon": "fa-calendar",
+            "name": "Ten and Change",
+            "description": "Over a decade of professional experience."
+        }
+    ],
+    "skills": [
+        {
+            "icon": "fa-js",
+            "name": "Javascript",
+            "value": 9
+        },
+        {
+            "icon": "fa-node-js",
+            "name": "Node.js",
+            "value": 9
+        },
+        {
+            "icon": "fa-react",
+            "name": "React.js",
+            "value": 9
+        },
+        {
+            "icon": "fa-cloud",
+            "name": "Web APIs",
+            "value": 8
+        },
+        {
+            "icon": "fa-linux",
+            "name": "Linux",
+            "value": 8
+        },
+        {
+            "icon": "fa-python",
+            "name": "Python",
+            "value": 5
+        },
+        {
+            "icon": "fa-gem",
+            "name": "Ruby",
+            "value": 4
+        },
+        {
+            "icon": "fa-rust",
+            "name": "Rust",
+            "value": 3
+        }
+    ]
+}
