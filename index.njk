@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://kit.fontawesome.com/cc7111bda4.js" crossorigin="anonymous"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					fontFamily: {
+						'source-code-pro': ['Source Code Pro', 'monospace'] 
+					},
+				},
+			},
+			variants: {
+			},
+			plugins: [
+			]
+		}
+	</script>
+	<link rel="stylesheet" href="/css/index.css">
+</html>
+
+<body>
+	<div class="flex-col justify-between font-source-code-pro p-8">
+		<header class="md:flex md:justify-between items-baseline">
+			<div>
+				<a href="/"><h1 class="text-3xl">Austin Pocus</h1></a>
+				<aside>My personal site</aside>
+			</div>
+	
+			<div class="flex">
+				<a class="text-lg underline decoration-double underline-offset-8 mx-2" href="https://blog.austinpocus.com">Blog</a>
+				<a class="text-lg underline decoration-double underline-offset-8 mx-2" href="https://github.com/ajpocus">Github</a>
+				<a class="text-lg underline decoration-double underline-offset-8 mx-2" href="https://linkedin.com/in/austin-pocus">LinkedIn</a>
+				<a class="text-lg underline decoration-double underline-offset-8 mx-2" href="https://twitter.com/AustinPocus">Twitter</a>
+			</div>
+		</header>
+	
+		<main class="flex-1 flex-col md:flex">
+			<section>
+				<figure class="flex justify-center">
+					<img class="h-36 md:h-64" src="/img/me6.jpg">
+					<img class="h-36 md:h-64" src="/img/me.jpg">
+				</figure>
+
+				<h2 class="text-2xl">Bio</h2>
+
+				<p>I've had a lifelong obsession with making things using computers. I started because I was a video game fanatic as a kid, and wanted to make my own games.</p>
+
+				<p>About 17 years later, I still haven't built a full game, most of my experience being on the web. Even so, I've tried to make a wide variety of things, including:</p>
+				
+				<ul>
+					<li>A frequency analysis of sound waves from my guitar</li>
+					<li>Graphics demos and pixel art makers</li>
+					<li>An additive synthesizer that combined waveforms to create 8-bit sounds</li>
+				</ul>
+
+				<p>In my spare time, I like to mess around with the MIDI keyboard and software synths, read (especially sci-fi and history books), and play fetch with my cat.</p>
+			</section>
+	
+			<section class="stats-section">
+				<div class="heading-group">
+					<h2 class="text-2xl">Achievements</h2>
+				</div>
+	
+				<ul class="text-xl">
+					{% for feat in info.feats %}
+						<li class="feat">
+							<header class="flex items-baseline">
+								<i class="fas {{ feat.icon }}"></i>
+								<h3 class="mx-2">{{ feat.name }}</h3>
+							</header>
+		
+							<div class="description">
+								{{ feat.description }}
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+	
+				<div class="heading-group">
+					<h2 class="text-xl">Skills</h2>
+				</div>
+	
+				<ul class="skill-list">
+					{% for skill in info.skills %}
+						<li class="flex justify-between md:w-1/2 p-8">
+							<div class="name">
+								<i class="fab {{ skill.icon }}"></i>
+								<label>{{ skill.name }}</label>
+							</div>
+		
+							<div class="dash"></div>
+		
+							<div class="meter">
+								{% for i in range(0, skill.value) %}
+									<div class="full cell"></div>
+								{% endfor %}
+
+								{% for i in range(0, 10 - skill.value) %}
+									<div class="cell"></div>
+								{% endfor %}
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+			</section>
+		</main>
+	
+		<footer id="main-footer">
+			&copy; Copyright 2021 Austin Pocus. All rights reserved.
+		</footer>
+	</div>
+</body>

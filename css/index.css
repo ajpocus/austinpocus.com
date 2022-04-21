@@ -212,13 +212,6 @@ figure .content .heading {
 	justify-content: space-between;
 }
 
-.skill .dash {
-	border-bottom: 2px dashed var(--border-color);
-	position: relative;
-	bottom: 8px;
-	margin: 0 8px
-}
-
 .skill .name {
 	display: flex;
 }
@@ -252,6 +245,13 @@ figure .content .heading {
 
 a {
 	color: var(--link-color);
+}
+
+.skill .dash {
+	border-bottom: 2px dashed var(--border-color);
+	position: relative;
+	bottom: 8px;
+	margin: 0 8px
 }
 
 /* 
