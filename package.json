@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ajpocus/austinpocus.com#readme",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.1"
+    "@11ty/eleventy": "^1.0.1",
+    "async": "^2.6.4"
   }
 }
