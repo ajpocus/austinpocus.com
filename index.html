@@ -8,51 +8,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/cc7111bda4.js" crossorigin="anonymous"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'source-code-pro': ['Source Code Pro', 'monospace'] 
+                    },
+                },
+            },
+            variants: {
+            },
+            plugins: [
+            ]
+        }
+    </script>
 </html>
 
 <body>
-    <div class="flex-col justify-between font-mono">
-        <header class="md:flex">
+    <div class="flex-col justify-between font-source-code-pro p-8">
+        <header class="md:flex md:justify-between items-baseline">
             <div>
                 <a href="/"><h1 class="text-3xl">Austin Pocus</h1></a>
                 <aside>My personal site</aside>
             </div>
     
             <div class="flex">
-                <a class="text-lg underline decoration-double underline-offset-2 mx-2" href="https://blog.austinpocus.com">Blog</a>
-                <a class="text-lg underline decoration-double underline-offset-2 mx-2" href="https://github.com/ajpocus">Github</a>
-                <a class="text-lg underline decoration-double underline-offset-2 mx-2" href="https://linkedin.com/in/austin-pocus">LinkedIn</a>
-                <a class="text-lg underline decoration-double underline-offset-2 mx-2" href="https://twitter.com/AustinPocus">Twitter</a>
+                <a class="text-lg underline decoration-double underline-offset-8 mx-2" href="https://blog.austinpocus.com">Blog</a>
+                <a class="text-lg underline decoration-double underline-offset-8 mx-2" href="https://github.com/ajpocus">Github</a>
+                <a class="text-lg underline decoration-double underline-offset-8 mx-2" href="https://linkedin.com/in/austin-pocus">LinkedIn</a>
+                <a class="text-lg underline decoration-double underline-offset-8 mx-2" href="https://twitter.com/AustinPocus">Twitter</a>
             </div>
         </header>
     
         <main class="flex-1 flex-col md:flex">
-            <section class="main-section">
-                <div class="content">
-                    <figure class="flex justify-center">
-                        <img class="h-36 md:h-64" src="/img/me6.jpg">
-                        <img class="h-36 md:h-64" src="/img/me.jpg">
-                    </figure>
-    
-                    <h2 class="text-xl">Bio</h2>
-    
-                    <p>I've had a lifelong obsession with making things using computers. I started because I was a video game fanatic as a kid, and wanted to make my own games.</p>
-    
-                    <p>About 17 years later, I still haven't built a full game, most of my experience being on the web. Even so, I've tried to make a wide variety of things, including:</p>
-                    
-                    <ul>
-                        <li>A frequency analysis of sound waves from my guitar</li>
-                        <li>Graphics demos and pixel art makers</li>
-                        <li>An additive synthesizer that combined waveforms to create 8-bit sounds</li>
-                    </ul>
-    
-                    <p>In my spare time, I like to mess around with the MIDI keyboard and software synths, read (especially sci-fi and history books), and play fetch with my cat.</p>
-                </div>
+            <section>
+                <figure class="flex justify-center">
+                    <img class="h-36 md:h-64" src="/img/me6.jpg">
+                    <img class="h-36 md:h-64" src="/img/me.jpg">
+                </figure>
+
+                <h2 class="text-2xl">Bio</h2>
+
+                <p>I've had a lifelong obsession with making things using computers. I started because I was a video game fanatic as a kid, and wanted to make my own games.</p>
+
+                <p>About 17 years later, I still haven't built a full game, most of my experience being on the web. Even so, I've tried to make a wide variety of things, including:</p>
+                
+                <ul>
+                    <li>A frequency analysis of sound waves from my guitar</li>
+                    <li>Graphics demos and pixel art makers</li>
+                    <li>An additive synthesizer that combined waveforms to create 8-bit sounds</li>
+                </ul>
+
+                <p>In my spare time, I like to mess around with the MIDI keyboard and software synths, read (especially sci-fi and history books), and play fetch with my cat.</p>
             </section>
     
             <section class="stats-section">
                 <div class="heading-group">
-                    <h2 class="text-xl">Achievements</h2>
+                    <h2 class="text-2xl">Achievements</h2>
                 </div>
     
                 <ul class="feat-list">
@@ -113,7 +126,7 @@
                 </ul>
     
                 <div class="heading-group">
-                    <h2 class="section-name">Skills</h2>
+                    <h2 class="text-xl">Skills</h2>
                 </div>
     
                 <ul class="skill-list">
