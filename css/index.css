@@ -22,9 +22,10 @@
 	background: lightgreen;
 }
 
-a {
+.link {
 	color: var(--link-color);
 	text-decoration: underline;
+	text-underline-offset: 4px;
 }
 
 .dash {

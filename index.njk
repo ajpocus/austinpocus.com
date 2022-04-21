@@ -27,15 +27,15 @@
 	<div class="flex-col justify-between font-source-code-pro p-8">
 		<header class="lg:flex lg:justify-between items-baseline">
 			<div>
-				<a href="/"><h1 class="text-4xl">Austin Pocus</h1></a>
+				<a class="link" href="/"><h1 class="text-4xl">Austin Pocus</h1></a>
 				<aside>My personal site</aside>
 			</div>
 	
 			<div class="flex">
-				<a class="text-lg underline decoration-double underline-offset-8 mx-2" href="https://blog.austinpocus.com">Blog</a>
-				<a class="text-lg underline decoration-double underline-offset-8 mx-2" href="https://github.com/ajpocus">Github</a>
-				<a class="text-lg underline decoration-double underline-offset-8 mx-2" href="https://linkedin.com/in/austin-pocus">LinkedIn</a>
-				<a class="text-lg underline decoration-double underline-offset-8 mx-2" href="https://twitter.com/AustinPocus">Twitter</a>
+				<a class="link text-lg underline decoration-double underline-offset-8 mx-2" href="https://blog.austinpocus.com">Blog</a>
+				<a class="link text-lg underline decoration-double underline-offset-8 mx-2" href="https://github.com/ajpocus">Github</a>
+				<a class="link text-lg underline decoration-double underline-offset-8 mx-2" href="https://linkedin.com/in/austin-pocus">LinkedIn</a>
+				<a class="link text-lg underline decoration-double underline-offset-8 mx-2" href="https://twitter.com/AustinPocus">Twitter</a>
 			</div>
 		</header>
 	
@@ -85,9 +85,9 @@
 					<h2 class="text-2xl">Skills</h2>
 				</div>
 	
-				<ul class="flex flex-wrap">
+				<ul class="flex-col lg:flex flex-wrap">
 					{% for skill in info.skills %}
-						<li class="flex-col lg:flex lg:justify-between w-1/2 p-8" title="{{ skill.value }} / 10">
+						<li class="flex justify-between w-full p-8" title="{{ skill.value }} / 10">
 							<div class="text-lg flex items-baseline">
 								<i class="fab {{ skill.icon }}"></i>
 								<label class="mx-2 whitespace-nowrap">{{ skill.name }}</label>
@@ -110,8 +110,9 @@
 			</section>
 		</main>
 	
-		<footer>
-			&copy; Copyright 2021 Austin Pocus. All rights reserved.
+		<footer class="flex justify-between">
+			<p>&copy; Copyright 2021 Austin Pocus. All rights reserved.</p>
+			<a class="link" href="https://github.com/ajpocus/austinpocus.com">View source</a>
 		</footer>
 	</div>
 </body>
