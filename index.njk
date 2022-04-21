@@ -87,7 +87,7 @@
 	
 				<ul class="flex flex-wrap">
 					{% for skill in info.skills %}
-						<li class="flex justify-between lg:w-1/2 p-8" title="{{ skill.value }} / 10">
+						<li class="flex-col lg:flex lg:justify-between w-1/2 p-8" title="{{ skill.value }} / 10">
 							<div class="text-lg flex items-baseline">
 								<i class="fab {{ skill.icon }}"></i>
 								<label class="mx-2 whitespace-nowrap">{{ skill.name }}</label>
