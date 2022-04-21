@@ -6,6 +6,10 @@
 	--border-color: #666c;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 .cell {
 	border: 1px solid var(--text-color);
 	width: 8px;
