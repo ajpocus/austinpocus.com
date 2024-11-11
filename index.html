@@ -4,10 +4,14 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Austin Pocus - My personal site - About me</title>
+
 		<link rel="icon" href="/favicon.png">
+		<link rel="stylesheet" href="/css/normalize.css">
+		
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script src="https://kit.fontawesome.com/cc7111bda4.js" crossorigin="anonymous"></script>
 		<script>
@@ -15,7 +19,8 @@
 				theme: {
 					extend: {
 						fontFamily: {
-							'source-code-pro': ['Source Code Pro', 'monospace'] 
+							"noto-sans": ["Noto Sans", "Arial", "Helvetica", "sans-serif"],
+							"merriweather": ["Merriweather", "Times New Roman", "Times", "serif"]
 						},
 					},
 				}
@@ -24,11 +29,11 @@
 		<link rel="stylesheet" href="/css/index.css">
 	</head>
 
-	<body>
-		<div class="font-source-code-pro p-8">
+	<body class="font-noto-sans">
+		<div class="p-8">
 			<header class="lg:flex lg:justify-between items-baseline">
 				<div>
-					<a class="link" href="/"><h1 class="text-4xl">Austin Pocus</h1></a>
+					<a class="link" href="/"><h1 class="font-merriweather text-4xl">Austin Pocus</h1></a>
 					<aside>My personal site</aside>
 				</div>
 		
@@ -46,7 +51,7 @@
 						<img class="h-64 lg:h-48" src="/img/me22.jpeg">
 					</figure>
 
-					<h2 class="text-2xl">Bio</h2>
+					<h2 class="font-merriweather text-2xl">Bio</h2>
 
 					<p class="my-4">I've had a lifelong obsession with making things using computers. I started because I was a video game fanatic as a kid, and wanted to make my own games.</p>
 
@@ -63,7 +68,7 @@
 		
 				<section class="lg:flex-1">
 					<div class="heading-group mt-8">
-						<h2 class="text-2xl">Achievements</h2>
+						<h2 class="font-merriweather text-2xl">Achievements</h2>
 					</div>
 
 					<ul class="flex flex-wrap">
@@ -113,36 +118,139 @@
 					</ul>
 		
 					<div class="heading-group mt-8">
-						<h2 class="text-2xl">Skills</h2>
+						<h2 class="font-merriweather text-2xl">Skills</h2>
 					</div>
 		
 					<ul class="w-full lg:flex lg:flex-wrap lg:flex-initial">
-						{% for skill in info.skills %}
-							<li class="flex justify-between w-full p-8" title="{{ skill.value }} / 10">
-								<div class="text-lg flex items-baseline">
-									<i class="fab {{ skill.icon }}"></i>
-									<label class="mx-2 whitespace-nowrap">{{ skill.name }}</label>
-								</div>
+						<li class="flex justify-between w-full p-8" title="9 / 10">
+							<div class="text-lg flex items-baseline">
+								<i class="fab fa-js"></i>
+								<label class="mx-2 whitespace-nowrap">Javascript</label>
+							</div>
 
-								<div class="dash mx-4 h-0.5 w-full self-center"></div>
+							<div class="dash mx-4 h-0.5 w-full self-center"></div>
 
-								<div class="flex self-center">
-									{% for i in range(skill.value) %}
-										<div class="full cell"></div>
-									{% endfor %}
+							<div class="flex self-center">
+								<progress max="10" value="9"></progress>
+							</div>
+						</li>
 
-									{% for i in range(10 - skill.value) %}
-										<div class="cell"></div>
-									{% endfor %}
-								</div>
-							</li>
-						{% endfor %}
+						<li class="flex justify-between w-full p-8" title="9 / 10">
+							<div class="text-lg flex items-baseline">
+								<i class="fab fa-node-js"></i>
+								<label class="mx-2 whitespace-nowrap">Node.js</label>
+							</div>
+
+							<div class="dash mx-4 h-0.5 w-full self-center"></div>
+
+							<div class="flex self-center">
+								<progress max="10" value="9"></progress>
+							</div>
+						</li>
+
+						<li class="flex justify-between w-full p-8" title="9 / 10"></li>
+							<div class="text-lg flex items-baseline">
+								<i class="fab fa-react"></i>
+								<label class="mx-2 whitespace-nowrap">React</label>
+							</div>
+
+							<div class="dash mx-4 h-0.5 w-full self-center"></div>
+
+							<div class="flex self-center">
+								<div class="full cell cell-9"></div>
+								<div class="empty cell cell-1"></div>
+							</div>
+						</li>
+
+						<li class="flex justify-between w-full p-8" title="9 / 10"></li>
+							<div class="text-lg flex items-baseline">
+								<i class="fab fa-linux"></i>
+								<label class="mx-2 whitespace-nowrap">Linux</label>
+							</div>
+
+							<div class="dash mx-4 h-0.5 w-full self-center"></div>
+
+							<div class="flex self-center">
+								<div class="full cell cell-9"></div>
+								<div class="empty cell cell-1"></div>
+							</div>
+						</li>
+
+						<li class="flex justify-between w-full p-8" title="8 / 10"></li>
+							<div class="text-lg flex items-baseline">
+								<i class="fab fa-cloud"></i>
+								<label class="mx-2 whitespace-nowrap">Web APIs</label>
+							</div>
+
+							<div class="dash mx-4 h-0.5 w-full self-center"></div>
+
+							<div class="flex self-center">
+								<div class="full cell cell-8"></div>
+								<div class="empty cell cell-2"></div>
+							</div>
+						</li>
+
+						<li class="flex justify-between w-full p-8" title="6 / 10"></li>
+							<div class="text-lg flex items-baseline">
+								<i class="fab fa-python"></i>
+								<label class="mx-2 whitespace-nowrap">Python</label>
+							</div>
+
+							<div class="dash mx-4 h-0.5 w-full self-center"></div>
+
+							<div class="flex self-center">
+								<div class="full cell cell-6"></div>
+								<div class="empty cell cell-4"></div>
+							</div>
+						</li>
+
+						<li class="flex justify-between w-full p-8" title="5 / 10"></li>
+							<div class="text-lg flex items-baseline">
+								<i class="fab fa-node-js"></i>
+								<label class="mx-2 whitespace-nowrap">Ruby on Rails</label>
+							</div>
+
+							<div class="dash mx-4 h-0.5 w-full self-center"></div>
+
+							<div class="flex self-center">
+								<div class="full cell cell-5"></div>
+								<div class="empty cell cell-5"></div>
+							</div>
+						</li>
+
+						<li class="flex justify-between w-full p-8" title="3 / 10"></li>
+							<div class="text-lg flex items-baseline">
+								<i class="fab fa-node-js"></i>
+								<label class="mx-2 whitespace-nowrap">Rust</label>
+							</div>
+
+							<div class="dash mx-4 h-0.5 w-full self-center"></div>
+
+							<div class="flex self-center">
+								<div class="full cell cell-3"></div>
+								<div class="empty cell cell-7"></div>
+							</div>
+						</li>
+
+						<li class="flex justify-between w-full p-8" title="2 / 10"></li>
+							<div class="text-lg flex items-baseline">
+								<i class="fab fa-node-js"></i>
+								<label class="mx-2 whitespace-nowrap">Kubernetes</label>
+							</div>
+
+							<div class="dash mx-4 h-0.5 w-full self-center"></div>
+
+							<div class="scale flex self-center">
+								<div class="full cell cell-2"></div>
+								<div class="empty cell cell-8"></div>
+							</div>
+						</li>
 					</ul>
 				</section>
 			</main>
 		
 			<footer class="flex justify-between mt-8">
-				<p>&copy; Copyright 2021 Austin Pocus. All rights reserved.</p>
+				<p>&copy; Copyright 2024 Austin Pocus. All rights reserved.</p>
 				<a class="link" href="https://github.com/ajpocus/austinpocus.com">View source</a>
 			</footer>
 		</div>
