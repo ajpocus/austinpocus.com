@@ -1,2 +1,0 @@
-/posts/*    https://blog.austinpocus.com/posts/:splat 301!
-/tags/*     https://blog.austinpocus.com/tags/:splat 301!
