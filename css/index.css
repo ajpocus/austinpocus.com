@@ -1,14 +1,10 @@
 :root {
-	--dark-green: #14281dff;
-	--rose-ebony: #64403eff;
-	--sea-green: #5b8c5aff;
-	--nyanza: #d8ffddff;
-	--aquamarine: #a9ffcbff;
+	--dark-green: #14281d;
+	--rose-ebony: #64403e;
+	--sea-green: #5b8c5a;
+	--nyanza: #d8ffdd;
+	--aquamarine: #a9ffcb;
 	--border-color: #232323;
-}
-
-* {
-	box-sizing: border-box;
 }
 
 .scale {
