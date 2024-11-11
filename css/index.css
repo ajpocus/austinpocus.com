@@ -15,62 +15,6 @@
 	border: 1px solid var(--rose-ebony);
 	width: 10em;
 }
-/* 
-.cell {
-	width: 8px;
-	height: 18px;
-	background: transparent;
-	margin: 0 2px;
-	border-right: 1px solid rgba(34, 34, 34, 0.762); 
-}
-
-.cell.full {
-	background: var(--aquamarine);
-}
-
-.cell-0 {
-	width: 0%;
-}
-
-.cell-1 {
-	width: 10%;
-}
-
-.cell-2 {
-	width: 20%;
-}
-
-.cell-3 {
-	width: 30%;
-}
-
-.cell-4 {
-	width: 40%;
-}
-
-.cell-5 {
-	width: 50%;
-}
-
-.cell-6 {
-	width: 60%;
-}
-
-.cell-7 {
-	width: 70%;
-}
-
-.cell-8 {
-	width: 80%;
-}
-
-.cell-9 {
-	width: 90%;
-}
-
-.cell-10 {
-	width: 100%;
-} */
 
 .link {
 	color: var(--link-color);
