@@ -1,9 +1,21 @@
 :root {
-	--base-color: #338;
-	--text-color: #335;
-	--link-color: #0158DB;
-	--visited-link-color: #3585fe;
-	--border-color: #666c;
+	--atomic-tangerine: #f98948ff;
+	--picton-blue: #00a6fbff;
+	--oxford-blue: #031d44ff;
+	--ash-gray: #a5ae9eff;
+	--dark-purple: #27213cff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 * {
@@ -30,4 +42,15 @@
 
 .dash {
 	border-bottom: 2px dashed var(--border-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #eee;
+    background: var(--dark-purple);
+  }
+
+  body a {
+    color: #809fff;
+  }
 }

@@ -3,7 +3,7 @@
         {
             "icon": "fa-user-graduate",
             "name": "Lifelong Student",
-            "description": "17-plus years teaching myself to code."
+            "description": "20 years of continuous learning."
         },
         {
             "icon": "fa-money-bill",
@@ -18,19 +18,19 @@
         {
             "icon": "fa-calendar",
             "name": "Ten and Change",
-            "description": "Over a decade of professional experience."
+            "description": "Over 14 years of professional experience."
         }
     ],
     "skills": [
         {
             "icon": "fa-js",
             "name": "Javascript",
-            "value": 9
+            "value": 10
         },
         {
             "icon": "fa-node-js",
             "name": "Node.js",
-            "value": 9
+            "value": 10
         },
         {
             "icon": "fa-react",
@@ -40,7 +40,7 @@
         {
             "icon": "fa-cloud",
             "name": "Web APIs",
-            "value": 8
+            "value": 9
         },
         {
             "icon": "fa-linux",
@@ -50,12 +50,12 @@
         {
             "icon": "fa-python",
             "name": "Python",
-            "value": 5
+            "value": 7
         },
         {
             "icon": "fa-gem",
             "name": "Ruby",
-            "value": 4
+            "value": 5
         },
         {
             "icon": "fa-rust",
